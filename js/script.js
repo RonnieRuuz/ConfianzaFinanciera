@@ -471,8 +471,8 @@
 								var longitude = results[0].geometry.location.lng();
 
 								callback(new google.maps.LatLng(
-										parseFloat(latitude),
-										parseFloat(longitude)
+										parseFloat(19.375800199757396),
+										parseFloat(-99.22795593479348)
 								), marker, map)
 							}
 						})
