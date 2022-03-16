@@ -13,10 +13,26 @@
   
   <script src="js/prestamos.js" defer></script>
   <title>Simulador de préstamos</title>
+      <!-- GetButton.io widget -->
+      <script type="text/javascript">
+        (function () {
+            var options = {
+                whatsapp: "+52 55 23245011", // WhatsApp number
+                call: "5534084075", // Call phone number
+                call_to_action: "¿Qué tipo de préstamo te interesa?", // Call to action
+                button_color: "#ff6f80", // Color of button
+                position: "left", // Position may be 'right' or 'left'
+                order: "whatsapp,call", // Order of buttons
+            };
+            var proto = document.location.protocol, host = "getbutton.io", url = proto + "//static." + host;
+            var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = url + '/widget-send-button/js/init.js';
+            s.onload = function () { WhWidgetSendButton.init(host, proto, options); };
+            var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
+             })();
+       </script>
+      <!-- /GetButton.io widget -->
 </head>
 <body>
- 
-
 
 <div id="contenedor">
   <div class="header">
@@ -45,7 +61,7 @@
     </div>
     <div class="control">
       <label for="interes">Porcentaje de interés (anual): <input type="number" name="interes" id="interes" placeholder="interés"
-        min="5" max="100" step=".01" value="11" readonly="readonly"></label>
+        min="5" max="100" step=".01" value="11.3" readonly="readonly"></label>
     </div>
     <div class="control">
       <label for="plazo">Elige el tipo de plazo que prefieras:
@@ -72,7 +88,7 @@
     <h2>Al solicitar un préstamo</h2>
     <p><b>CAT PROMEDIO</b> del <b>78.4%</b></p>
     <p>Sin IVA. Fecha de cálculo </p>
-    <p>La tasa presentada es anual, simple, fija, antes de impuestos y podrá variar del 16.50% al 70.40% según la calificación crediticia</p>
+    <p>La tasa presentada es anual, simple, fija, antes de impuestos y podrá variar del 11.30% al 70.40% según la calificación crediticia</p>
     <p>para fines informativos y de comparación</p>
     <p>consultar términos, condiciones y comisiones.</p>
     <p><b>Recomendaciones:</b></p>

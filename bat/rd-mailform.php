@@ -1,5 +1,7 @@
 <?php
 
+
+
 $formConfigFile = file_get_contents("rd-mailform.config.json");
 $formConfig = json_decode($formConfigFile, true);
 
@@ -8,7 +10,7 @@ date_default_timezone_set('Etc/UTC');
 try {
     require './phpmailer/PHPMailerAutoload.php';
 
-    $recipients = $formConfig[''];
+    $recipients = $formConfig['recipientEmail'];
 
     preg_match_all("/([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)/", $recipients, $addresses, PREG_OFFSET_CAPTURE);
 

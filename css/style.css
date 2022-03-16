@@ -10118,6 +10118,11 @@ p.rights a:hover {
 
 .map-image {
 	opacity: .14;
+	position: flex;
+}
+
+.fondomap{
+
 }
 
 .map-marker {
