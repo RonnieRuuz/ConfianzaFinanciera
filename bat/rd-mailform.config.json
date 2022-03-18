@@ -1,0 +1,8 @@
+{
+  "useSmtp": false,
+  "host": "smtp.gmail.com",
+  "port": 465,
+  "username": "ronnie.ruuz@gmail.com",
+  "password": "Shippo61999",
+  "recipientEmail": "ronnie.ruuz@gmail.com"
+}

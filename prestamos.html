@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Jose Estrada">
+  <meta name="description" content="Simulador de préstamos">
+  <meta name="keywords" content="simulador, prestamos">
+  <link rel="stylesheet" href="css/prestamos.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <script src="js/prestamos.js" defer></script>
+  <title>Simulador de préstamos</title>
+  <!-- GetButton.io widget -->
+  <script type="text/javascript">
+    (function () {
+      var options = {
+        whatsapp: "+525551726240", // WhatsApp number
+        call: "5534084075", // Call phone number
+        call_to_action: "¿Qué tipo de préstamo te interesa?", // Call to action
+        button_color: "#ff6f80", // Color of button
+        position: "left", // Position may be 'right' or 'left'
+        order: "whatsapp,call", // Order of buttons
+      };
+      var proto = document.location.protocol, host = "getbutton.io", url = proto + "//static." + host;
+      var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = url + '/widget-send-button/js/init.js';
+      s.onload = function () { WhWidgetSendButton.init(host, proto, options); };
+      var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
+    })();
+  </script>
+  <!-- /GetButton.io widget -->
+</head>
+
+<body>
+
+  <div id="contenedor">
+
+    <div id="contenedorInfo">
+      <div class="header">
+        <h2>Al solicitar un préstamo:</h2>
+        <p><b>CAT PROMEDIO</b> del <b>78.4%</b></p>
+        <p>Sin IVA. Fecha de cálculo </p>
+        <p>La tasa presentada es anual, simple, fija, antes de impuestos y podrá variar del 11.30% al 70.40% según la
+          calificación crediticia</p>
+        <p>para fines informativos y de comparación</p>
+        <p>consultar términos, condiciones y comisiones.</p>
+        <p><b>Recomendaciones:</b></p>
+        <p>Incumplir tus obligaciónes te puede generar comisiones e intereses moratorios.</p>
+        <p>Contratar créditos que excedan tu capacidad de pago afecta tu historial crediticio.</p>
+        <p><b>Requisitos:</b></p>
+        <p>1.- Tener buen historial crediticio, esto se logra al ser puntual en el pago de tus préstamos vigentes y
+          contar
+          con al menos 6 meses de historial créditicio.</p>
+        <p>2.- Contar con ingresos mínimos de: $1000 MXN al més y contar con al menos 9 meses en tu empleo actual y/o
+          negocio.</p>
+        <p>3.- Identificación oficial vigente (INE o IFE) y comprobante de domicilio no mayor a 3 meses.</p>
+        <p><b>Pasos para obtener un prestamo:</b></p>
+        <p>*Llena tu formulario.</p>
+        <p>*Obten tu pre-aprovación.</p>
+        <p>*Envía tus documentos.</p>
+        <p>*Realiza una videollamada.</p>
+        <p>*Firma y recibe tu préstamo.</p>
+        <br><br>
+      </div>
+    </div>
+
+    <div id="contenedorForm">
+      <div class="header">
+        <h2>Simulador de préstamos:</h2>
+        <p>Calcula el <b>monto</b> y el <b>número de pagos</b> que mejor se acomode a tu estilo de vida</p>
+      </div>
+      <div name="frmPrestamo" id="frmPrestamo">
+        <div class="control">
+          <label for="nombre">Ingresa tu nombre: <input type="text" name="nombre" id="nombre"
+              placeholder="nombre"></label>
+        </div>
+        <div class="control">
+          <label for="fecha">Fecha: <input type="date" name="fecha" id="fecha" placeholder="fecha"></label>
+        </div>
+        <div class="control">
+          <label for="monto">Monto a financiar: <input type="number" name="monto" id="monto" placeholder="monto"
+              min="500" step="500"></label>
+        </div>
+        <div class="control">
+          <label for="periodo">Periodo de pago:
+            <select name="periodo" id="periodo">
+              <option value="semanal">Semanal</option>
+              <option value="quincenal">Quincenal</option>
+              <option value="mensual">Mensual</option>
+            </select>
+          </label>
+        </div>
+        <div class="control">
+          <label for="interes">Porcentaje de interés (anual): <input type="number" name="interes" id="interes"
+              placeholder="interés" min="5" max="100" step=".01" value="11.3" readonly="readonly"></label>
+        </div>
+        <div class="control">
+          <label for="plazo">Elige el tipo de plazo que prefieras:
+            <div class="radios">
+              <label for="mensual" class="radioContenedor">Mensual
+                <input type="radio" name="tipoPlazo" id="mensual" value="mensual">
+                <span class="circle"></span>
+              </label>
+              <label for="anual" class="radioContenedor">Anual
+                <input type="radio" name="tipoPlazo" id="anual" value="anual">
+                <span class="circle"></span>
+              </label>
+            </div>
+            <input type="number" name="plazo" id="plazo" min="1" max="12" step="1">
+          </label>
+        </div>
+        <button id="simular" onclick="simularPrestamo()">Simular préstamo</button>
+      </div>
+    </div>
+
+
+    <div id="contenedorTabla">
+      <div class="header">
+        <h2>TABLA DE ARMOTIZACIÓN</h2>
+      </div>
+
+      <div id="amortizaciones">
+
+      </div>
+    </div>
+  </div>
+
+
+
+</body>
+
+</html>
